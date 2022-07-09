@@ -1,0 +1,158 @@
+
+/* header */
+.header{
+    display: flex;
+    padding:20px 0px;
+}
+
+.header select{
+    flex:0.2;
+    font-size: 1.2rem;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+
+.header input{
+    flex:0.8;
+    padding:13px 10px;
+    font-size: 1.2rem;  
+}
+
+/* header */
+
+
+/* center */
+.center{
+
+}
+
+.center .posts{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0.7rem;
+}
+
+.center .posts .post{
+    position: relative;
+    background-color: rgb(107, 189, 243);
+    max-width: 380px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.175);
+    border-radius: 8px;
+    font-size: 1.3rem;
+    padding:10px;
+    margin:7px;
+    cursor: pointer;
+    transition: transform .2s linear;
+}
+
+.center .posts .post:hover{
+    transform: scale(1.1);
+    border-color: #555;
+}
+
+.center .posts .post button:first-child{
+    position: absolute;
+    right:10px;
+    top:10px;
+    background-color: transparent;
+    border:none;
+    font-size: large;
+    cursor: pointer;
+}
+
+.center .posts .post button:first-child:hover{
+    transform: scale(1.1);
+}
+
+.center .posts .post .post__title{
+    margin-bottom: 10px;
+}
+
+.center .posts .post .post__body{
+    font-size: 1.2rem;
+}
+
+.center .posts .post .post__author{
+    margin:10px 0px;
+}
+
+.center .posts .post .post__author span{
+    font-weight: 600;
+}
+
+
+/* center */
+
+
+/* pagination */
+.pagination {
+    margin:40px 0px;
+    display: flex;
+    justify-content: center;
+}
+  
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd; /* Gray */
+  }
+
+.pagination a.active {
+    background-color: hsl(171, 100%, 41%);
+    color: white;
+    border: 1px solid hsl(171, 100%, 41%);
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+/* pagination */
+
+/* footer */
+.footer{
+    border-top: 1px solid rgb(197, 193, 193);
+    text-align: center;
+    padding-top: 25px;
+    font-size: 1.3rem;
+    margin:2rem 0px;
+    color:#555;
+}
+
+/* footer */
+
+
+/* media */
+
+@media screen and (max-width:1070px) {
+
+    .header{
+        margin:20px;
+    }
+
+    .center .posts{
+        justify-items: center;
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .center .posts{
+        grid-template-columns: auto;
+    }
+}
+
+@media screen and (max-width:485px) {
+    .header{
+        flex-direction: column;   
+    }
+    .header input{
+        margin-top: 15px;
+    }
+
+    .center .posts .post{
+        max-width: 320px !important;
+    }
+}

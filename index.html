@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task test</title>
+    <link rel="stylesheet" type="text/css" href="./src/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="./src/css/posts.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <select name="search">
+                <option value="author">Search by Author</option>
+                <option value="title">Search by Title</option>
+                <option value="body">Search by Body</option>
+            </select>
+            <input type="text" id="searching" placeholder="Search...">
+        </header>
+
+        <div class="center">
+            <div class="posts" id="posts">
+            </div>
+        </div>
+        <div class="pagination" id="paginate">
+        </div>
+    </div>
+    <footer class="footer">
+        Copyright &copy; 2022 Amanchik
+    </footer>
+    <script type="text/javascript" src="./src/posts.js"></script>
+</body>
+
+</html>
